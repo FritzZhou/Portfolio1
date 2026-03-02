@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+img {
+    border-radius: 35%;
+    height: 15rem;
+    display: flex;
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*  BODY  */
+body {
+  color: white;
+  background: url('rm183-wan-11.jpg') no-repeat center center/cover;
+  position: relative;
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+/*  NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.navbar .brand {
+  font-weight: bold;
+  color: #5563DE;
+  font-size: 1.5rem;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar li a:hover {
+  color: gray;
+}
+
+#open {
+  color: #5563DE;
+}
+
+/*  CONTENT SECTIONS */
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.text-section {
+  max-width: 900px;
+  font-weight: 500;
+  line-height: 1.8;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.text-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.highlight {
+  color: #5563DE;
+}
+
+#myName {
+  font-size: 1.1rem;
+}
+
+#Lourdes {
+  color: pink;
+}
+
+#philip {
+  color: blue;
+}
+
+#pines {
+  color: red;
+}
+
+/*  IMAGE STYLES  */
+.image-section {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.image-section, img {
+  width: 50%;
+  max-width: 192px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.image-container, img {
+  width: 100%;
+  max-width: 192;
+  border-radius: 50%;
+  box-shadow: 0 40px 15 200px rgba(255, 255, 255, 0.2);
+  display: flex;
+}
+
+
+/* SOCIAL LINKS */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  color: rgb(255, 64, 64);
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #007bff;
+}
+
+/* ANIMATION  */
+.fade-section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.fade-section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*  MOBILE RESPONSIVE  */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .navbar li a {
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .text-section h1 {
+    font-size: 2rem;
+  }
+}
